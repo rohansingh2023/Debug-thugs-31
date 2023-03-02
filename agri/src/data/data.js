@@ -76,17 +76,17 @@ const data = [
       LoadingCpacity: "1000 kg",
       Route: "Satara-Vashi",
     },
-    // {
-    //     "_id": {
-    //         "$oid": "64002b827923e973c6e42eeb"
-    //     },
-    //     "Name": "Abhishek thorat",
-    //     "Contact": "9082035567",
-    //     "VehicleType": "Pick-up truck",
-    //     "VehicleNO": "MH 04 5421",
-    //     "LoadingCpacity": "500 kg",
-    //     "Route": "Nagpur-Vashi"
-    // },
+    {
+        "_id": {
+            "$oid": "64002b827923e973c6e42eeb"
+        },
+        Name: "Abhishek thorat",
+        Contact: "9082035567",
+        VehicleType: "Pick-up truck",
+        VehicleNO: "MH 04 5421",
+        LoadingCapacity: "500 kg",
+        Route: "Nagpur-Vashi"
+    },
     // {
     //     "_id": {
     //         "$oid": "64002bc47923e973c6e42eec"
