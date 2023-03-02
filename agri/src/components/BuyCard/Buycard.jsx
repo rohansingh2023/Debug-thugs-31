@@ -8,10 +8,10 @@ import {
   Typography,
   ButtonBase,
 } from "@material-ui/core/";
-import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
-import DeleteIcon from "@material-ui/icons/Delete";
+import ChatIcon from "@material-ui/icons/Chat";
+import LocalMallIcon from "@material-ui/icons/LocalMall";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
+// import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
 // import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 // import { useHistory } from "react-router-dom";
 
@@ -86,7 +86,7 @@ const BuyCard = ({ d }) => {
           //   onClick={() => dispatch(likePost(post._id))}
         >
           {/* <Likes /> */}
-          <DeleteIcon /> &nbsp; Buy
+          <LocalMallIcon /> &nbsp; Buy
         </Button>
         {/* {(user?.result?.googleId === post?.creator ||
           user?.result?._id === post?.creator) && ( */}
@@ -95,7 +95,7 @@ const BuyCard = ({ d }) => {
           color="secondary"
           // onClick={() => dispatch(deletePost(post._id))}
         >
-          <DeleteIcon fontSize="small" /> &nbsp; Chat
+          <ChatIcon fontSize="small" /> &nbsp; Chat
         </Button>
         {/* )} */}
       </CardActions>
