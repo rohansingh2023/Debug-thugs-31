@@ -1,9 +1,6 @@
 Welcome to AI Gyan
 
-Contribute:
+Latest Code.
 
-1. Create your Feature Branch (git checkout -b TE/name)
-2. Commit your Changes (git commit -m 'Add some AmazingFeature')
-3. Push to the Branch (git push origin TE/name)
-4. Open a Pull Request 
-5. Create a Pull Request
+- Take Pull only from this branch.
+- Merge only with this branch after push to your respective branches.
