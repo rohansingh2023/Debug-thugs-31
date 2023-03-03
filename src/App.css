@@ -1,0 +1,80 @@
+/* FeedbackForm.css */
+
+/* Body */
+body {
+  background-color: #f0fff0; /* light green */
+}
+
+
+/* Form */
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bolder;
+  font-family: fantasy;
+  font-size: large;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #cccccc;
+  border-radius: 0.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8FBC8F; /* dark green */
+  box-shadow: 0 0 0.5rem rgba(143, 188, 143, 0.5);
+}
+
+/* Buttons */
+button {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #297029; /* dark green */
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2E8B57; /* sea green */
+  box-shadow: 0 0 0.5rem rgba(46, 139, 87, 0.5);
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
