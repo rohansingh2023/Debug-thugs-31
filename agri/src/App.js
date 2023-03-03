@@ -9,6 +9,7 @@ import Storage from "./pages/Storage";
 import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
 import Success from "./pages/Success";
+import FeedbackForm from "./pages/Feedback/Feedback";
 // import FeedbackForm from "./pages/Feedback";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <Route path="/storage" element={<Storage />}></Route>
           <Route path="/shipping" element={<Ship />}></Route>
           <Route path="/success" element={<Success />}></Route>
-          {/* <Route path="/feedback" element={<FeedbackForm />}></Route> */}
+          <Route path="/feedback" element={<FeedbackForm />}></Route>
         </Routes>
       </BrowserRouter>
       <Footer />

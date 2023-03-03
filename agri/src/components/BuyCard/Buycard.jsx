@@ -20,6 +20,7 @@ import useStyles from "./styles";
 const BuyCard = ({ d }) => {
   const classes = useStyles();
   const navigate = useNavigate();
+  console.log(d.contact_number);
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -60,9 +61,18 @@ const BuyCard = ({ d }) => {
         >
           {d.title}
         </Typography>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          component="p"
+          style={{ marginLeft: 15, marginTop: 10 }}
+          // className="ml-4"
+        >
+          {d.description}
+        </Typography>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {d.location}
+          <Typography variant="body1" color="textSecondary" component="h6">
+            {d.village} {d.taluka}, {d.district} {d.state}
           </Typography>
         </CardContent>
       </ButtonBase>
@@ -78,6 +88,8 @@ const BuyCard = ({ d }) => {
                 amount: d.price,
                 product: d.title,
                 quantity: d.quantity,
+                address: d.address,
+                number: d.contact_number,
               },
             })
           }
