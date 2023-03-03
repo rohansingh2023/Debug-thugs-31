@@ -5,8 +5,8 @@ const Navbar = () => {
   return (
     <div>
       
-      <nav class=" border-gray-200 px-2 sm:px-4 uppercase font-semibold dark:bg-gray-900">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <nav className=" border-gray-200 px-2 sm:px-4 uppercase font-semibold dark:bg-gray-900">
+        <div className="container flex flex-wrap items-center justify-between mx-auto">
           <NavLink to="" className="flex items-center">
             <img
               src="../images/sprout.png"
