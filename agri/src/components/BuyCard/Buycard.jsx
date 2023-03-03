@@ -71,7 +71,16 @@ const BuyCard = ({ d }) => {
           size="small"
           color="primary"
           //   disabled={!user?.result}
-          onClick={() => navigate("/payment")}
+          onClick={() =>
+            navigate("/payment", {
+              state: {
+                name: d.owner,
+                amount: d.price,
+                product: d.title,
+                quantity: d.quantity,
+              },
+            })
+          }
         >
           <LocalMallIcon /> &nbsp; Buy
         </Button>

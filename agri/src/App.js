@@ -9,12 +9,13 @@ import Storage from "./pages/Storage";
 import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
 import FeedbackForm from "./pages/Feedback";
+import Success from "./pages/Success";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/sell" element={<Seller />}></Route>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/storage" element={<Storage />}></Route>
           <Route path="/shipping" element={<Ship />}></Route>
           <Route path="/feedback" element={<FeedbackForm />}></Route>
+          <Route path="/success" element={<Success />}></Route>
         </Routes>
       <Footer />
       </BrowserRouter>
