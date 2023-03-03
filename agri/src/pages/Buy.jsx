@@ -41,9 +41,9 @@ const Buy = () => {
             </button>
           </div>
         </div>
-        <div className="flex-[0.75] flex items-center max-h-screen overflow-y-scroll justify-start  flex-wrap ml-[10vh]">
+        <div className="flex-[0.75] flex items-center max-h-screen overflow-y-scroll justify-center  flex-wrap ml-[10vh]">
           {data.map((d, i) => (
-            <div className="h-[420px] w-[300px] mr-[60px] mt-[50px]">
+            <div className="h-[380px] w-[260px] mr-[60px] mt-[50px]">
               <BuyCard d={d} key={i} />
             </div>
           ))}
