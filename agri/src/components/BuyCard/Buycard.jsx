@@ -11,6 +11,7 @@ import {
 import ChatIcon from "@material-ui/icons/Chat";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import { useNavigate } from "react-router-dom";
 // import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
 // import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 // import { useHistory } from "react-router-dom";
@@ -19,7 +20,7 @@ import useStyles from "./styles";
 
 const BuyCard = ({ d }) => {
   const classes = useStyles();
-  //   const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -39,21 +40,9 @@ const BuyCard = ({ d }) => {
         />
         <div className={classes.overlay}>
           <Typography variant="h6">2 kg</Typography>
-          {/* <Typography variant="body2">
-            {moment(post.createdAt).fromNow()}
-          </Typography> */}
         </div>
-        {/* {(user?.result?.googleId === post?.creator ||
-          user?.result?._id === post?.creator) && ( */}
         <div className={classes.overlay2} name="edit">
-          <Button
-            //   onClick={(e) => {
-            //     e.stopPropagation();
-            //     setCurrentId(post._id);
-            //   }}
-            style={{ color: "white" }}
-            size="small"
-          >
+          <Button style={{ color: "white" }} size="small">
             <MoreHorizIcon fontSize="medium" />
           </Button>
         </div>
@@ -73,7 +62,6 @@ const BuyCard = ({ d }) => {
         </Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {/* {post.message.split(" ").splice(0, 20).join(" ")}... */}
             {d.location}
           </Typography>
         </CardContent>
@@ -83,9 +71,8 @@ const BuyCard = ({ d }) => {
           size="small"
           color="primary"
           //   disabled={!user?.result}
-          //   onClick={() => dispatch(likePost(post._id))}
+          onClick={() => navigate("/payment")}
         >
-          {/* <Likes /> */}
           <LocalMallIcon /> &nbsp; Buy
         </Button>
         {/* {(user?.result?.googleId === post?.creator ||
