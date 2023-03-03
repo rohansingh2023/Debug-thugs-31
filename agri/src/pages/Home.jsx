@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
     return (
-<<<<<<< HEAD
+
         <div>
             <div >
                 <div class="relative">
@@ -32,10 +32,10 @@ const Home = () => {
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">Fresh Vegetables and Fruits</div>
                         <p class="text-gray-700 text-base">
-                            Freshly delivered Fruits and Vegetables with cost effectiveness.
+                            Freshly delivered Fruits and Vegetables with cost effectiveness.Freshly delivered Fruits and Vegetables with cost effectiveness.
                         </p>
-                        <button class="absolute bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                            Buy
+                        <button class="absolute mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                            Ready to Buy
                         </button>
                     </div>
                 </div>
@@ -48,8 +48,8 @@ const Home = () => {
                         <p class="text-gray-700 text-base">
                             Farmers can share the transportation cost or by choosing the route in which trucks or goods vehicles are running to the main market.
                         </p>
-                        <button class="absolute bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                            Ship
+                        <button class="absolute mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                            Start Shipping
                         </button>
                     </div>
                 </div>
@@ -60,10 +60,10 @@ const Home = () => {
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">Cold Storage</div>
                         <p class="text-gray-700 text-base">
-                            The cold storages improving the life and retaining freshness of the products.
+                            The cold storages improving the life and retaining freshness of the products. Freshly delivered Fruits and Vegetables with cost effectiveness.
                         </p>
-                        <button class="absolute bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                            Store
+                        <button class="absolute mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                            Store your goods
                         </button>
                     </div>
                 </div>
@@ -73,10 +73,10 @@ const Home = () => {
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">Happy Farmers</div>
                         <p class="text-gray-700 text-base">
-                            Produced being reached at time with maximum benefit to the farmers.
+                            Produced being reached at time with maximum benefit to the farmers.Freshly delivered Fruits and Vegetables with cost effectiveness.
                         </p>
-                        <button class="absolute bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                            Sell
+                        <button class="absolute mt-5 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                            Sell your produced
                         </button>
                     </div>
                 </div>
@@ -84,21 +84,9 @@ const Home = () => {
             </div>
 
         </div>
-
-
-=======
         
 
- 
-    <div class="relative">
-        <img class="w-full" src="../images/plant1.jpg" />
-        <h1 class="absolute p-7 text-5xl text-white top-1/2 left-1/5">
-            We BRIDGE Gaps</h1>
-        
-    </div>
-        
->>>>>>> d39a59cd7d2e1f1b97a9b3c9e62a3709610157ad
-    )
+    );
 };
 
 
