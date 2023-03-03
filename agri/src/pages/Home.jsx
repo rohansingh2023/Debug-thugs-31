@@ -3,6 +3,7 @@ import React from "react";
 const Home = () => {
     return (
 
+
         <div>
             <div >
                 <div class="relative">
@@ -84,6 +85,7 @@ const Home = () => {
             </div>
 
         </div>
+
     );
 };
 
