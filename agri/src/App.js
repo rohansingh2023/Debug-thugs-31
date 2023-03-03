@@ -8,12 +8,12 @@ import Seller from "./pages/Seller";
 import Storage from "./pages/Storage";
 import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
-import FeedbackForm from "./pages/Feedback";
+import FeedbackForm from "./components/FeedbackForm/Feedback";
 import Success from "./pages/Success";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
       <Navbar/>
         <Routes>

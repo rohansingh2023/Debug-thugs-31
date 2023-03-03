@@ -2,9 +2,9 @@ import React from 'react'
 
 const Seller = () => {
     return (
-        <div className='bg-cream text-charcoal min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto'>
+        <div className='text-charcoal min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto'>
             <div className='flex flex-col flex-1 rounded-md shadow-xl my-10 mx-32 md:p-0 lg:pt-8 lg:px-8 md:mx-36'>
-                <form action="" className='flex flex-col gap-5 uppercase font-sans font-semibold'>
+                <form action="" className='flex flex-col gap-5 uppercase font-sans font-light'>
                     <div className='flex flex-row justify-between'>
                         <label htmlFor="">
                             <p className="pl-1">Category</p>
