@@ -43,23 +43,23 @@ function CropForm() {
         <main class="flex-1 mx-32 md:p-0 lg:pt-8 lg:px-8 md:mx-36 flex flex-col">
           <section class="bg-cream-lighter p-4 shadow-lg">
             <div class="md:flex">
-              <h2 class="md:w-1/3 uppercase tracking-wide text-sm sm:text-lg mb-6">
-                Search your Traders
+              <h2 class="md:w-1/3 uppercase tracking-wide text-lg text-sm sm:text-lg mb-6">
+                Search your Traders AiFarmming Portal
               </h2>
             </div>
             <form onSubmit={handleSubmit}>
               <div class="md:flex mb-8">
                 <div class="md:w-1/3">
-                  <legend class="uppercase tracking-wide text-sm">
+                  <legend class="uppercase tracking-wide text-xl">
                     Location
                   </legend>
-                  <p class="text-xs font-light text-red">
+                  <p class="text-md font-medium text-red">
                     Farmer Details is required.
                   </p>
                 </div>
                 <div class="md:flex-1 mt-2 mb:mt-0 md:px-3">
                   <div class="mb-4">
-                    <label class="block uppercase tracking-wide text-xs font-bold">
+                    <label class="block uppercase tracking-wide text-xl font-bold">
                       Name
                     </label>
                     <input
@@ -133,7 +133,7 @@ function CropForm() {
               </div>
               <div class="md:flex mb-8">
                 <div class="md:w-1/3">
-                  <legend class="uppercase tracking-wide text-sm">
+                  <legend class="uppercase tracking-wide text-md font-medium">
                     Contact
                   </legend>
                 </div>
@@ -182,7 +182,7 @@ function CropForm() {
 
               <div class="md:flex mb-6">
                 <div class="md:w-1/3">
-                  <legend class="uppercase tracking-wide text-sm">
+                  <legend class="uppercase tracking-wide text-md font-medium">
                     Description
                   </legend>
                 </div>
@@ -196,38 +196,15 @@ function CropForm() {
                   ></textarea>
                 </div>
               </div>
-              <div class="md:flex mb-6">
-                <div class="md:w-1/3">
-                  <legend class="uppercase tracking-wide text-sm">
-                    Crop Image
-                  </legend>
-                </div>
-                <div class="md:flex-1 px-3 text-center">
-                  <div class="button bg-gold hover:bg-gold-dark text-cream mx-auto cusor-pointer relative">
-                    <input
-                      class="opacity-0 absolute pin-x pin-y"
-                      type="file"
-                      name="cover_image"
-                    />
-                    Crop Image
-                  </div>
-                </div>
-              </div>
-              <div class="md:flex mb-6 border border-t-1 border-b-0 border-x-0 border-cream-dark">
-                <div class="md:flex-1 px-3 text-center md:text-right">
-                  <input type="hidden" name="sponsor" value="0" />
-                  <input
-                    class="button text-cream-lighter bg-brick hover:bg-brick-dark"
-                    type="submit"
-                    value="Create Location"
-                  />
-                </div>
-              </div>
+        
+            <button type="submit" className="h-12 w-36 bg-green-700 text-white"> Submit Request</button>
             </form>
           </section>
         </main>
       </body>
-      <div className="traders grid grid-cols-4">
+      <div className="header text-4xl text-center">Our Best Traders Ready For You</div>
+      <div className="info text-2xl text-center pt-5">Total Traders available  {data.length} Drivers</div>
+      <div className="traders grid grid-cols-4 mx-8">
         {data.map((it, ind) => (
           <Card data={it} />
         ))}
