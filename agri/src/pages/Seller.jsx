@@ -8,7 +8,7 @@ const Seller = () => {
                     <div className='flex flex-row justify-between'>
                         <label htmlFor="">
                             <p className="pl-1">Category</p>
-                            <select className='bg-gray-100 rounded-md p-2 my-2' name="category" id="fields[category]" placeholder='select'>
+                            <select className='bg-slate-100 rounded-md p-2 my-2' name="category" id="fields[category]" placeholder='select'>
                                 <option value="vegetable">Rice</option>
                                 <option value="vegetable">Grapes</option>
                                 <option value="vegetable">Wheat</option>
@@ -25,7 +25,7 @@ const Seller = () => {
                     <div className='grid grid-flow-col gap-4'>
                         <label htmlFor="" className='w-full'>
                             <p className="pl-1">State</p>
-                            <select className='bg-gray-100 rounded-md p-2 my-2 w-full' name="category" id="fields[state]">
+                            <select className='bg-slate-100 rounded-md p-2 my-2 w-full' name="category" id="fields[state]">
                                 <option value="Maharashtra">Maharashtra</option>
                                 <option value="Madhyapradesh">Madhyapradesh</option>
                                 <option value="Goa">Goa</option>
@@ -36,7 +36,7 @@ const Seller = () => {
                         </label>
                         <label htmlFor="" className='w-full'>
                             <p className="pl-1">District</p>
-                            <select className='bg-gray-100 rounded-md p-2 my-2 w-full' name="category" id="fields[district]">
+                            <select className='bg-slate-100 rounded-md p-2 my-2 w-full' name="category" id="fields[district]">
                                 <option value="Pune">Pune</option>
                                 <option value="Satara">Satara</option>
                                 <option value="Nagpur">Nagpur</option>
@@ -47,7 +47,7 @@ const Seller = () => {
                         </label>
                         <label htmlFor="" className='w-full'>
                             <p className="pl-1">Taluka</p>
-                            <select className='bg-gray-100 rounded-md p-2 my-2 w-full' name="category" id="fields[taluka]" placeholder='select'>
+                            <select className='bg-slate-100 rounded-md p-2 my-2 w-full' name="category" id="fields[taluka]" placeholder='select'>
                                 <option value="Satara">Satara</option>
                                 <option value="Karad">Karad</option>
                                 <option value="Wai">Wai</option>
@@ -63,7 +63,7 @@ const Seller = () => {
                         </label>
                         <label htmlFor="" className='w-full'>
                             <p className="pl-1">Village</p>
-                            <select className='bg-gray-100 rounded-md p-2 my-2 w-full' name="category" id="fields[village]" placeholder='select'>
+                            <select className='bg-slate-100 rounded-md p-2 my-2 w-full' name="category" id="fields[village]" placeholder='select'>
                                 <option value="Wai">Wai</option>
                                 <option value="Kusgaon">Kusgaon</option>
                                 <option value="Pasarni">Pasarni</option>
