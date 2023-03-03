@@ -12,11 +12,10 @@ import ChatIcon from "@material-ui/icons/Chat";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { useNavigate } from "react-router-dom";
+import useStyles from "./styles";
 // import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
 // import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 // import { useHistory } from "react-router-dom";
-
-import useStyles from "./styles";
 
 const BuyCard = ({ d }) => {
   const classes = useStyles();
@@ -39,17 +38,18 @@ const BuyCard = ({ d }) => {
           title="Wheat"
         />
         <div className={classes.overlay}>
-          <Typography variant="h6">2 kg</Typography>
+          <Typography variant="h6">${d.price}</Typography>
         </div>
         <div className={classes.overlay2} name="edit">
           <Button style={{ color: "white" }} size="small">
-            <MoreHorizIcon fontSize="medium" />
+            <Typography variant="body1">{d.quantity} kg</Typography>
+            {/* <MoreHorizIcon fontSize="medium" /> */}
           </Button>
         </div>
         {/* )} */}
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary" component="h2">
-            {d.quantity} kg
+            {d.owner}
           </Typography>
         </div>
         <Typography
