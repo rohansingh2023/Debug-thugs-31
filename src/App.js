@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css'
-// import farmingBackground from './farming-background.jpg';
+
 
 
 function FeedbackForm() {
@@ -10,6 +10,7 @@ function FeedbackForm() {
   const [state, setState] = useState('');
   const [problem, setProblem] = useState('');
   const [contactNumber, setContactNumber] = useState('')
+  
  
 
   const handleSubmit = (event) => {
