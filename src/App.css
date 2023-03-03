@@ -3,6 +3,9 @@
 /* Body */
 body {
   background-color: #f0fff0; /* light green */
+  background-image: url("../public/images/India_farming.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 
