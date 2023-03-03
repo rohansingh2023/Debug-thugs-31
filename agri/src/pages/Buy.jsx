@@ -1,110 +1,77 @@
-import React from "react";
-// import "./Buy.css";
+import React, { useState } from "react";
 import BuyCard from "../components/BuyCard/Buycard";
+import data from "../data/crops";
 
 const Buy = () => {
-  const data = [
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-    {
-      title: "Wheat",
-      quantity: 2,
-      img: "https://tse1.mm.bing.net/th?id=OIP.zfkVnZ7kRfddKFfTex5I5wHaFl&pid=Api&rs=1&c=1&qlt=95&w=147&h=110",
-      location:
-        "58MG+MX6, South Central Railway Colony, Nanded, Maharashtra 431605",
-    },
-  ];
+  const [cropName, setCropName] = useState("");
+  const [quantity, setQuantity] = useState(0);
+  const [location, setLocation] = useState("");
+  const [cropsData, setCropsData] = useState(data);
 
   return (
-    // <div className="flex before:bg-test before:bg-no-repeat before:bg-cover before:bg-center before:bg-fixed before:opacity-70 overflow-hidden">
-    <div className="flex bg-buy bg-no-repeat bg-cover bg-center bg-fixed">
-      <div className="flex-[0.25]  sticky max-h-screen w-11/12 mt-[5vh] overflow-hidden">
-        <div className="bg-slate-200 py-5 px-5 space-y-10 ml-[3vh] mt-[3vh] rounded-md shadow-md">
-          <h1 className="text-3xl font-bold">Search For Products</h1>
-          <p className="text-xl font-semibold">Filter by:</p>
-          <div className="flex items-center space-x-5">
-            {/* <p>Title</p> */}
-            <input
-              type="text"
-              placeholder="Crop Name"
-              className="rounded-lg p-1 w-full"
-            />
-          </div>
-          <div className="flex items-center space-x-5">
-            {/* <p>Title</p> */}
-            <input
-              type="text"
-              placeholder="Quantity"
-              className="rounded-lg p-1 w-full"
-            />
-          </div>
-          <div className="flex items-center space-x-5">
-            {/* <p>Title</p> */}
-            <input
-              type="text"
-              placeholder="Location"
-              className="rounded-lg p-1 w-full"
-            />
-          </div>
+    <div className="relative h-screen w-screen overflow-hidden">
+      <div className="absolute top-0 left-0 opacity-30 bg-buy bg-no-repeat bg-cover bg-center bg-fixed h-full w-full"></div>
+      <div className="flex absolute top-0 left-0 h-full w-full overflow-hidden">
+        <div className="flex-[0.25]  sticky max-h-screen w-11/12 mt-[5vh] overflow-hidden">
+          <div className="bg-slate-200 py-5 px-5 space-y-5 ml-[3vh] mt-[3vh] rounded-md shadow-lg shadow-slate-700">
+            <h1 className="text-2xl font-bold uppercase">
+              Search For Products
+            </h1>
+            <p className="text-xl font-semibold">Filter by:</p>
+            <div className="flex items-center space-x-5">
+              {/* <p>Title</p> */}
+              <input
+                type="text"
+                value={cropName}
+                onChange={(e) => setCropName(e.target.value)}
+                placeholder="Crop Name"
+                className="rounded-lg p-1 w-full placeholder:text-sm"
+              />
+            </div>
+            <div className="flex items-center space-x-5">
+              {/* <p>Title</p> */}
+              <input
+                type="text"
+                value={quantity}
+                onChange={(e) => setQuantity(e.target.value)}
+                placeholder="Quantity"
+                className="rounded-lg p-1 w-full placeholder:text-sm"
+              />
+            </div>
+            <div className="flex items-center space-x-5">
+              {/* <p>Title</p> */}
+              <input
+                type="text"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                placeholder="Location"
+                className="rounded-lg p-1 w-full placeholder:text-sm"
+              />
+            </div>
 
-          <button className="p-2 bg-green-400 rounded-md w-full hover:bg-green-600">
-            Search
-          </button>
-        </div>
-      </div>
-      <div className="flex-[0.75] flex items-center max-h-screen overflow-y-scroll justify-start  flex-wrap ml-[10vh]">
-        {data.map((d, i) => (
-          <div className="h-[420px] w-[300px] mr-[80px] mt-[50px]">
-            <BuyCard d={d} key={i} />
+            {/* <button
+              className="p-2 bg-green-400 rounded-md w-full hover:bg-green-600"
+              onClick={displaySearchedCrops}
+            >
+              Search
+            </button> */}
           </div>
-        ))}
+        </div>
+        <div className="flex-[0.75] flex items-start max-h-screen overflow-y-scroll justify-start flex-wrap ml-[20vh]">
+          {cropsData.length > 0 ? (
+            cropsData
+              .filter((u) =>
+                u.title.toLowerCase().includes(cropName || quantity || location)
+              )
+              .map((d, i) => (
+                <div className="h-[380px] w-[260px] mr-[60px] mb-[20px] mt-[20px]">
+                  <BuyCard d={d} key={i} />
+                </div>
+              ))
+          ) : (
+            <span>No products found</span>
+          )}
+        </div>
       </div>
     </div>
   );

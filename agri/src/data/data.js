@@ -9,12 +9,13 @@ const data = [
       VehicleNO: "MH 04 5421",
       LoadingCapacity: "1000",
       Route: "Nashik-Thane",
+      image:"../assets/truck-3.jpg"
     },
     {
       _id: {
         $oid: "640023c57923e973c6e42ee3",
       },
-      Nam: "Tejas patne",
+      Name: "Tejas patne",
       Contact: "9082855567",
       VehicleType: "Truck",
       VehicleNO: "MH 04 7401",
@@ -47,46 +48,46 @@ const data = [
       _id: {
         $oid: "64002a1a7923e973c6e42ee8",
       },
-      Nam: "Heramb ",
+      Name: "Heramb ",
       Contact: "9082035567",
       VehicleTyp: "Pick-up truck",
       VehicleNO: "MH 01 5421",
       LoadingCpacity: "20000 kg",
       Route: "Amravati-Vashi",
     },
-    {
-      _id: {
-        $oid: "64002a6e7923e973c6e42ee9",
-      },
-      Name: "Akshat Satare",
-      Contact: "8082035567",
-      VehicleType: "truck",
-      VehicleNO: "MH 02 5421",
-      LoadingCpacity: "3500 kg",
-      Route: "Pune-Kolhapur",
-    },
-    {
-      _id: {
-        $oid: "64002b297923e973c6e42eea",
-      },
-      Name: "Kshitij Singh",
-      Contact: "9912035567",
-      VehicleType: "truck",
-      VehicleNO: "MH 04 5421",
-      LoadingCpacity: "1000 kg",
-      Route: "Satara-Vashi",
-    },
-    {
-        "_id": {
-            "$oid": "64002b827923e973c6e42eeb"
-        },
-        Name: "Abhishek thorat",
-        Contact: "9082035567",
-        VehicleType: "Pick-up truck",
-        VehicleNO: "MH 04 5421",
-        LoadingCapacity: "500 kg",
-        Route: "Nagpur-Vashi"
-    },
+    // {
+    //   _id: {
+    //     $oid: "64002a6e7923e973c6e42ee9",
+    //   },
+    //   Name: "Akshat Satare",
+    //   Contact: "8082035567",
+    //   VehicleType: "truck",
+    //   VehicleNO: "MH 02 5421",
+    //   LoadingCpacity: "3500 kg",
+    //   Route: "Pune-Kolhapur",
+    // },
+    // {
+    //   _id: {
+    //     $oid: "64002b297923e973c6e42eea",
+    //   },
+    //   Name: "Kshitij Singh",
+    //   Contact: "9912035567",
+    //   VehicleType: "truck",
+    //   VehicleNO: "MH 04 5421",
+    //   LoadingCpacity: "1000 kg",
+    //   Route: "Satara-Vashi",
+    // },
+    // {
+    //     "_id": {
+    //         "$oid": "64002b827923e973c6e42eeb"
+    //     },
+    //     Name: "Abhishek thorat",
+    //     Contact: "9082035567",
+    //     VehicleType: "Pick-up truck",
+    //     VehicleNO: "MH 04 5421",
+    //     LoadingCapacity: "500 kg",
+    //     Route: "Nagpur-Vashi"
+    // },
     // {
     //     "_id": {
     //         "$oid": "64002bc47923e973c6e42eec"
