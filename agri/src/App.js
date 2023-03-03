@@ -12,11 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/sell' element={<Seller/>}></Route>
+          <Route path='/sell' element={<Seller />}></Route>
+          <Route path='/storage' element={<Storage/>}></Route>
         </Routes>
-        <Routes>
-          <Route path='/Storage' element={<Storage/>}></Route>
-        </Routes>
+        
       </BrowserRouter>
       <Footer/>
     </div>
