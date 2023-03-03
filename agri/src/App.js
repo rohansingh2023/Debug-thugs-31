@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -8,15 +9,15 @@ import Seller from "./pages/Seller";
 import Storage from "./pages/Storage";
 import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
+import FeedbackForm from "./components/FeedbackForm/Feedback";
 import Success from "./pages/Success";
-import FeedbackForm from "./pages/Feedback/Feedback";
 // import FeedbackForm from "./pages/Feedback";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
+    <div>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/sell" element={<Seller />}></Route>
@@ -24,11 +25,11 @@ function App() {
           <Route path="/payment" element={<Payment />}></Route>
           <Route path="/storage" element={<Storage />}></Route>
           <Route path="/shipping" element={<Ship />}></Route>
-          <Route path="/success" element={<Success />}></Route>
           <Route path="/feedback" element={<FeedbackForm />}></Route>
+          <Route path="/success" element={<Success />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }

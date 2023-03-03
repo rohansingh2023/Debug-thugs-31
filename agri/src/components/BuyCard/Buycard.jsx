@@ -8,11 +8,15 @@ import {
   Typography,
   ButtonBase,
 } from "@material-ui/core/";
-import ChatIcon from "@material-ui/icons/Chat";
+import CallIcon from "@material-ui/icons/Call";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { useNavigate } from "react-router-dom";
 import useStyles from "./styles";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css'
+import toast from "react-hot-toast";
+
 // import ThumbUpAltOutlined from "@material-ui/icons/ThumbUpAltOutlined";
 // import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 // import { useHistory } from "react-router-dom";
@@ -20,7 +24,10 @@ import useStyles from "./styles";
 const BuyCard = ({ d }) => {
   const classes = useStyles();
   const navigate = useNavigate();
-  console.log(d.contact_number);
+
+  const popUp = ()=>{
+    toast(`Call ${d.contact_number}`)
+  }
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -101,9 +108,9 @@ const BuyCard = ({ d }) => {
         <Button
           size="small"
           color="secondary"
-          // onClick={() => dispatch(deletePost(post._id))}
+          onClick={() => popUp}
         >
-          <ChatIcon fontSize="small" /> &nbsp; Chat
+          <CallIcon fontSize="small" /> &nbsp; Call
         </Button>
         {/* )} */}
       </CardActions>

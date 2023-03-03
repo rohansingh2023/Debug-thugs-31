@@ -12,15 +12,15 @@ const Payment = () => {
 
   const handleCheckout = async () => {
     await axios
-      .post("http://localhost:5000/stripe/create-checkout-session", {
+      .post("http://localhost:5001/stripe/create-checkout-session", {
         items,
         userId: 12345,
       })
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
+          toast.success("Payment Successfull");
         }
-        toast.success("Payment Successfull");
       })
       .catch((err) => console.log(err));
   };
@@ -45,16 +45,10 @@ const Payment = () => {
       <button onClick={handleCheckout} className="mt-10">
         Check Out
       </button>
-      {/* <StripeCheckout
-        stripeKey={publishableKey}
-        label="Pay"
-        name="Pay with card"
-        billingAddress
-        shippingAddress
-        amount={stripePrice}
-        description={`Your total is ${stripePrice}`}
-        token={payNow}
-      /> */}
+      {/* <div className="flex flex-col justify-center h-screen">
+        <h1 className="text-center">Pay {location.state.amount}</h1>
+        <button onClick={handleCheckout}>Check Out</button>
+      </div> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const Seller = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:6000/crops/create", {
+      await axios.post("http://localhost:6000/crops/create", {
         title,
         quantity,
         price,
@@ -42,23 +42,22 @@ const Seller = () => {
       console.log(error);
     }
   };
-
   return (
-    <div className="bg-cream text-charcoal min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto">
+    <div className="text-charcoal min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto">
       <div className="flex flex-col flex-1 rounded-md shadow-xl my-10 mx-32 md:p-0 lg:pt-8 lg:px-8 md:mx-36">
         <form
           action=""
-          className="flex flex-col gap-5 uppercase font-sans font-semibold"
+          className="flex flex-col gap-5 uppercase font-sans font-light"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-row justify-between">
             <label htmlFor="">
               <p className="pl-1">Category</p>
               <select
-                className="bg-gray-100 rounded-md p-2 my-2"
-                name="category"
+                className="bg-slate-100 rounded-md p-2 my-2"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                name="category"
                 id="fields[category]"
                 placeholder="select"
               >
@@ -81,22 +80,18 @@ const Seller = () => {
                 className="upload-btn"
                 onDone={({ base64 }) => setImg(base64)}
               />
-              {/* <input
-                type="file"
-                // value={img}
-                onChange={(e) => setImg(e.target.files[0])}
-                name="fields[images][]"
-              /> */}
             </label>
           </div>
           <div className="grid grid-flow-col gap-4">
             <label htmlFor="" className="w-full">
               <p className="pl-1">State</p>
               <select
-                className="bg-gray-100 rounded-md p-2 my-2 w-full"
-                name="category"
+                className="bg-slate-100
+                              
+                             rounded-md p-2 my-2 w-full"
                 value={state}
                 onChange={(e) => setState(e.target.value)}
+                name="category"
                 id="fields[state]"
               >
                 <option value="Maharashtra">Maharashtra</option>
@@ -110,10 +105,10 @@ const Seller = () => {
             <label htmlFor="" className="w-full">
               <p className="pl-1">District</p>
               <select
-                className="bg-gray-100 rounded-md p-2 my-2 w-full"
-                name="category"
+                className="bg-slate-100 rounded-md p-2 my-2 w-full"
                 value={district}
                 onChange={(e) => setDistrict(e.target.value)}
+                name="category"
                 id="fields[district]"
               >
                 <option value="Pune">Pune</option>
@@ -127,11 +122,11 @@ const Seller = () => {
             <label htmlFor="" className="w-full">
               <p className="pl-1">Taluka</p>
               <select
-                className="bg-gray-100 rounded-md p-2 my-2 w-full"
-                name="category"
-                id="fields[taluka]"
+                className="bg-slate-100 rounded-md p-2 my-2 w-full"
                 value={taluka}
                 onChange={(e) => setTaluka(e.target.value)}
+                name="category"
+                id="fields[taluka]"
                 placeholder="select"
               >
                 <option value="Satara">Satara</option>
@@ -150,12 +145,12 @@ const Seller = () => {
             <label htmlFor="" className="w-full">
               <p className="pl-1">Village</p>
               <select
-                className="bg-gray-100 rounded-md p-2 my-2 w-full"
+                className="bg-slate-100 rounded-md p-2 my-2 w-full"
+                value={village}
+                onChange={(e) => setVillage(e.target.value)}
                 name="category"
                 id="fields[village]"
                 placeholder="select"
-                value={village}
-                onChange={(e) => setVillage(e.target.value)}
               >
                 <option value="Wai">Wai</option>
                 <option value="Kusgaon">Kusgaon</option>
@@ -170,9 +165,9 @@ const Seller = () => {
             <input
               type="text"
               placeholder="50-60"
-              className="pl-1 text-gray-500 bg-slate-100 rounded-md w-full p-2"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
+              className="pl-1 text-gray-500 bg-slate-100 rounded-md w-full p-2"
             />
           </label>
           <label htmlFor="">
@@ -201,9 +196,9 @@ const Seller = () => {
               <p className="pl-1">Contact Number</p>
               <input
                 type="tel"
+                placeholder="e.g. +91-9876543210"
                 value={contact_number}
                 onChange={(e) => setContact_Number(e.target.value)}
-                placeholder="e.g. +91-9876543210"
                 className="pl-1 text-gray-500 bg-slate-100 rounded-md w-full p-2"
               />
             </label>

@@ -12,7 +12,8 @@ const Buy = () => {
   useEffect(() => {
     const getCrops = async () => {
       try {
-        const res = await axios.get("http://localhost:6000/crops/");
+        const res = await axios.get("http://localhost:5001/crops/");
+        console.log(res.data);
         setCropsData(res.data);
       } catch (error) {
         console.log(error);
@@ -23,7 +24,7 @@ const Buy = () => {
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
-      <div className="absolute top-0 left-0 opacity-30 bg-buy bg-no-repeat bg-cover bg-center bg-fixed h-full w-full"></div>
+      <div className="absolute top-0 left-0 opacity-60 bg-buy bg-no-repeat bg-cover bg-center bg-fixed h-full w-full"></div>
       <div className="flex absolute top-0 left-0 h-full w-full overflow-hidden">
         <div className="flex-[0.25]  sticky max-h-screen w-11/12 mt-[5vh] overflow-hidden">
           <div className="bg-slate-200 py-5 px-5 space-y-5 ml-[3vh] mt-[3vh] rounded-md shadow-lg shadow-slate-700">
@@ -54,9 +55,12 @@ const Buy = () => {
           {cropsData.length > 0 ? (
             cropsData
               .filter((u) => u.title.toLowerCase().includes(cropName))
-              .map((d, i) => (
-                <div className="h-[380px] w-[260px] mr-[60px] mb-[20px] mt-[20px]">
-                  <BuyCard d={d} key={i} />
+              .map((d) => (
+                <div
+                  className="h-[380px] w-[260px] mr-[60px] mb-[20px] mt-[20px]"
+                  key={d._id}
+                >
+                  <BuyCard d={d} />
                 </div>
               ))
           ) : (
