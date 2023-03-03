@@ -6,6 +6,7 @@ import Buy from "./pages/Buy";
 import Seller from './pages/Seller';
 import Storage from "./pages/Storage"
 import Navbar from './components/Navbar';
+import Ship from './pages/Ship';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/sell' element={<Seller/>}></Route>
           <Route path="/buy" element={<Buy />}></Route>
           <Route path='/storage' element={<Storage/>}></Route>
+          <Route path='/shipping' element={<Ship/>}></Route>
         </Routes>
       </BrowserRouter>
       <Footer/>
