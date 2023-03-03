@@ -1,7 +1,6 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
-import Ship from './pages/Ship';
 
 function App() {
   return (
@@ -10,9 +9,9 @@ function App() {
         <Routes>
 
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/shiped' element={<Ship/>}></Route>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
