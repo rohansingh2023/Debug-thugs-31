@@ -1,12 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BuyCard from "../components/BuyCard/Buycard";
 import data from "../data/crops";
+import axios from "axios";
 
 const Buy = () => {
   const [cropName, setCropName] = useState("");
   const [quantity, setQuantity] = useState(0);
   const [location, setLocation] = useState("");
-  const [cropsData, setCropsData] = useState(data);
+  const [cropsData, setCropsData] = useState([]);
+
+  useEffect(() => {
+    const getCrops = async () => {
+      try {
+        const res = await axios.get("http://localhost:5001/crops/");
+        console.log(res.data);
+        setCropsData(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getCrops();
+  }, []);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
@@ -17,7 +31,7 @@ const Buy = () => {
             <h1 className="text-2xl font-bold uppercase">
               Search For Products
             </h1>
-            <p className="text-xl font-semibold">Filter by:</p>
+            <p className="text-xl font-semibold">Enter Crop Name:</p>
             <div className="flex items-center space-x-5">
               {/* <p>Title</p> */}
               <input
@@ -25,26 +39,6 @@ const Buy = () => {
                 value={cropName}
                 onChange={(e) => setCropName(e.target.value)}
                 placeholder="Crop Name"
-                className="rounded-lg p-1 w-full placeholder:text-sm"
-              />
-            </div>
-            <div className="flex items-center space-x-5">
-              {/* <p>Title</p> */}
-              <input
-                type="text"
-                value={quantity}
-                onChange={(e) => setQuantity(e.target.value)}
-                placeholder="Quantity"
-                className="rounded-lg p-1 w-full placeholder:text-sm"
-              />
-            </div>
-            <div className="flex items-center space-x-5">
-              {/* <p>Title</p> */}
-              <input
-                type="text"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                placeholder="Location"
                 className="rounded-lg p-1 w-full placeholder:text-sm"
               />
             </div>
@@ -60,12 +54,13 @@ const Buy = () => {
         <div className="flex-[0.75] flex items-start max-h-screen overflow-y-scroll justify-start flex-wrap ml-[20vh]">
           {cropsData.length > 0 ? (
             cropsData
-              .filter((u) =>
-                u.title.toLowerCase().includes(cropName || quantity || location)
-              )
-              .map((d, i) => (
-                <div className="h-[380px] w-[260px] mr-[60px] mb-[20px] mt-[20px]">
-                  <BuyCard d={d} key={i} />
+              .filter((u) => u.title.toLowerCase().includes(cropName))
+              .map((d) => (
+                <div
+                  className="h-[380px] w-[260px] mr-[60px] mb-[20px] mt-[20px]"
+                  key={d._id}
+                >
+                  <BuyCard d={d} />
                 </div>
               ))
           ) : (
