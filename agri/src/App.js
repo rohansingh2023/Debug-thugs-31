@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -10,12 +11,13 @@ import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
 import FeedbackForm from "./components/FeedbackForm/Feedback";
 import Success from "./pages/Success";
+// import FeedbackForm from "./pages/Feedback";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-      <Navbar/>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/sell" element={<Seller />}></Route>
@@ -26,7 +28,7 @@ function App() {
           <Route path="/feedback" element={<FeedbackForm />}></Route>
           <Route path="/success" element={<Success />}></Route>
         </Routes>
-      <Footer />
+        <Footer />
       </BrowserRouter>
     </div>
   );
