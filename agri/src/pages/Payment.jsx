@@ -23,7 +23,7 @@ const Payment = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center h-screen">
+    <div className="flex flex-col justify-center h-screen ">
       <h1 className="text-center">Pay {location.state.amount}</h1>
       <button onClick={handleCheckout}>Check Out</button>
       {/* <StripeCheckout

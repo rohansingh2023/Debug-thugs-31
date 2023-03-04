@@ -50,7 +50,6 @@ const Home = () => {
           </div>
         </div>
 
-
         {/* <!--Card 2--> */}
         <div class="rounded overflow-hidden shadow-lg hover:scale-105">
           <img class="w-full h-1/2" src="../images/vehicle1.jpg" alt="Forest" />
@@ -99,7 +98,6 @@ const Home = () => {
       </div>
     </div>
   );
-
 };
 
 export default Home;

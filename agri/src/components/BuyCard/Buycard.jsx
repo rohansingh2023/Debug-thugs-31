@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Card,
   CardActions,
@@ -8,7 +9,8 @@ import {
   Typography,
   ButtonBase,
 } from "@material-ui/core/";
-import ChatIcon from "@material-ui/icons/Chat";
+// import AddIcCallIcon from '@mui/icons-material/AddIcCall';
+import ChatIcon from "@material-ui/icons/Call";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import { useNavigate } from "react-router-dom";
@@ -20,6 +22,7 @@ import useStyles from "./styles";
 const BuyCard = ({ d }) => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Card className={classes.card} raised elevation={6}>
@@ -89,10 +92,19 @@ const BuyCard = ({ d }) => {
         <Button
           size="small"
           color="secondary"
-          // onClick={() => dispatch(deletePost(post._id))}
+          // onClick={() =>}
+          onClick={() => setIsOpen("9082035567")}
         >
-          <ChatIcon fontSize="small" /> &nbsp; Chat
+          <ChatIcon fontSize="small" /> &nbsp; Call
         </Button>
+        {isOpen && (
+          <div>
+                    
+            <div>          This is the content of the pop-up.         </div>
+                    
+            
+          </div>
+        )}
         {/* )} */}
       </CardActions>
     </Card>
