@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../data/data";
 import Card from "./Card";
 import { useNavigate } from "react-router-dom";
 
 function CropForm() {
-  console.log(data);
+  let filterData=data;
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -18,7 +18,9 @@ function CropForm() {
   const [quantity, setQuantity] = useState("");
   const [address, setAddress] = useState("");
   const [rate, setRate] = useState("");
+  const [available, setAvailable] = useState(data);
 
+  useEffect(() => {}, [filterData]);
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
@@ -32,12 +34,14 @@ function CropForm() {
       rate: rate,
       email: email,
     };
-    navigate("/trader", { state: { formData } });
-    let filterData = data.filter((it, idx) => {
-      return it.quantity < quantity;
+    // navigate("/trader", { state: { formData } });
+    filterData = data.filter((it, idx) => {
+      return it.LoadingCpacity > quantity;
     });
+    setAvailable(filterData)
     console.log("filterData", filterData);
-    console.log(formData); // Outputs form data to console
+    console.log(formData);
+     // Outputs form data to console
     // You can use fetch or any other library to send the form data to a server
   };
 
@@ -161,10 +165,10 @@ function CropForm() {
                     </label>
                     <input
                       className="w-full shadow-inner p-4 border-0"
-                      type="url"
+                      type='number'
                       value={quantity}
                       onChange={(e) => setQuantity(e.target.value)}
-                      name="url"
+                    
                       placeholder="acme.co"
                     />
                   </div>
@@ -216,10 +220,10 @@ function CropForm() {
         Our Best Traders Ready For You
       </div>
       <div className="info text-2xl text-center pt-5">
-        Total Traders available {data.length} Drivers
+        Total Traders available {available.length} Drivers
       </div>
       <div classNameName="traders grid grid-cols-4 mx-8">
-        {data.map((it, ind) => (
+        {available.map((it, ind) => (
           <Card data={it} key={ind} />
         ))}
       </div>

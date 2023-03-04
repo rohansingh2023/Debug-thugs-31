@@ -7,7 +7,7 @@ const data = [
       Contact: "9082035567",
       VehicleType: "Truck",
       VehicleNO: "MH 04 5421",
-      LoadingCapacity: "1000",
+      LoadingCapacity: 10000,
       Route: "Nashik-Thane",
       image:"../assets/truck-3.jpg"
     },
@@ -19,7 +19,7 @@ const data = [
       Contact: "9082855567",
       VehicleType: "Truck",
       VehicleNO: "MH 04 7401",
-      LoadingCapacity: "8500 kg",
+      LoadingCapacity: 8000,
       Route: "Nashik-Vashi",
     },
     {
@@ -30,7 +30,7 @@ const data = [
       Contact: "8082035567",
       VehicleType: "Tempo",
       VehicleNO: "MH 03 5421",
-      LoadingCapacity: "10000 kg",
+      LoadingCapacity: 3000,
       Route: "Pune-Mmbai",
     },
     {
@@ -41,7 +41,7 @@ const data = [
       Contact: "9082035567",
       VehicleType: "ck",
       VehicleNO: "MH 04 5421",
-      LoadingCpacity: "500 kg",
+      LoadingCpacity: 2000,
       Route: "Nashik-Vashi",
     },
     {
@@ -52,7 +52,7 @@ const data = [
       Contact: "9082035567",
       VehicleTyp: "Pick-up truck",
       VehicleNO: "MH 01 5421",
-      LoadingCpacity: "20000 kg",
+      LoadingCpacity: 20000,
       Route: "Amravati-Vashi",
     },
     // {
