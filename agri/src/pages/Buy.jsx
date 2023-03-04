@@ -23,7 +23,7 @@ const Buy = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="transition ease-in-out delay-150 relative h-screen w-screen overflow-hidden">
       <div className="absolute top-0 left-0 opacity-60 bg-buy bg-no-repeat bg-cover bg-center bg-fixed h-full w-full"></div>
       <div className="flex absolute top-0 left-0 h-full w-full overflow-hidden">
         <div className="flex-[0.25]  sticky max-h-screen w-11/12 mt-[5vh] overflow-hidden">

@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar";
 import Ship from "./pages/Ship";
 import FeedbackForm from "./components/FeedbackForm/Feedback";
 import Success from "./pages/Success";
-// import FeedbackForm from "./pages/Feedback";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           <Route path="/shipping" element={<Ship />}></Route>
           <Route path="/feedback" element={<FeedbackForm />}></Route>
           <Route path="/success" element={<Success />}></Route>
+          <Route path="/about" element={<AboutUs />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

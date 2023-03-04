@@ -37,7 +37,7 @@ const Home = () => {
         className="p-10 grid rounded-1/3 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-10"
       >
         {/* <!--Card 1--> */}
-        <div className="rounded overflow-hidden shadow-lg hover:scale-105">
+        <div className="transition ease-in-out delay-150 rounded overflow-hidden shadow-lg hover:scale-105">
           <img
             className="w-full h-1/2"
             src="../images/vegetable1.jpg"
@@ -59,7 +59,7 @@ const Home = () => {
         </div>
 
         {/* <!--Card 2--> */}
-        <div className="rounded overflow-hidden shadow-lg hover:scale-105">
+        <div className="transition ease-in-out delay-150 rounded overflow-hidden shadow-lg hover:scale-105">
           <img
             className="w-full h-1/2"
             src="../images/vehicle1.jpg"
@@ -80,7 +80,7 @@ const Home = () => {
         </div>
 
         {/* <!--Card 3--> */}
-        <div className="rounded overflow-hidden shadow-lg hover:scale-105">
+        <div className="transition ease-in-out delay-150 rounded overflow-hidden shadow-lg hover:scale-105">
           <img
             className="w-full h-1/2"
             src="../images/storage2.jpg"
@@ -99,7 +99,7 @@ const Home = () => {
           </div>
         </div>
         {/* card 4 */}
-        <div className="rounded overflow-hidden shadow-lg hover:scale-105">
+        <div className="transition ease-in-out delay-150 rounded overflow-hidden shadow-lg hover:scale-105">
           <img
             className="w-full h-1/2"
             src="../images/farmer1.jpg"
