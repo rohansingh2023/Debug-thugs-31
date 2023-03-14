@@ -22,6 +22,21 @@ const Seller = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (
+        title === "" ||
+        price === "" ||
+        owner === "" ||
+        img === "" ||
+        state === "" ||
+        taluka === "" ||
+        district === "" ||
+        village === "" ||
+        description === "" ||
+        contact_number === 0 ||
+        address === ""
+      ) {
+        return alert("Enter all credentials!!!");
+      }
       await axios.post("http://localhost:5001/crops/create", {
         title,
         quantity,

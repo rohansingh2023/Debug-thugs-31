@@ -13,6 +13,7 @@ import FeedbackForm from "./components/FeedbackForm/Feedback";
 import Success from "./pages/Success";
 // import FeedbackForm from "./pages/Feedback";
 import trader from "./components/Trader";
+import Educating from "./pages/Educating";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/feedback" element={<FeedbackForm />}></Route>
           <Route path="/success" element={<Success />}></Route>
           <Route path="/trader" element={<trader />}></Route>
+          <Route path="/educating" element={<Educating />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>

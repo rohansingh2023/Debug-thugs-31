@@ -29,9 +29,13 @@ const BuyCard = ({ d }) => {
   const classes = useStyles();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
 
   const popUp = () => {
-    toast(`Call ${d.contact_number}`);
+    alert(`Call ${d.contact_number}`);
   };
 
   return (
@@ -54,10 +58,17 @@ const BuyCard = ({ d }) => {
           <Typography variant="h6">${d.price}</Typography>
         </div>
         <div className={classes.overlay2} name="edit">
-          <Button style={{ color: "white" }} size="small">
-            <Typography variant="body1">{d.quantity} kg</Typography>
-            {/* <MoreHorizIcon fontSize="medium" /> */}
-          </Button>
+          {/* <Button style={{ color: "white" }} size="small"> */}
+          {/* <Typography variant="body1">{d.quantity} kg</Typography> */}
+          <p className="text-lg">{quantity} kg</p>
+          <button
+            className="h-8 w-8 rounded-full flex items-center justify-center ml-3 hover:bg-green-500"
+            onClick={increaseQuantity}
+          >
+            +
+          </button>
+          {/* <MoreHorizIcon fontSize="medium" /> */}
+          {/* </Button> */}
         </div>
         {/* )} */}
         <div className={classes.details}>
@@ -110,7 +121,7 @@ const BuyCard = ({ d }) => {
         </Button>
         {/* {(user?.result?.googleId === post?.creator ||
           user?.result?._id === post?.creator) && ( */}
-        <Button size="small" color="secondary" onClick={() => popUp}>
+        <Button size="small" color="secondary" onClick={popUp}>
           <CallIcon fontSize="small" /> &nbsp; Call
         </Button>
 

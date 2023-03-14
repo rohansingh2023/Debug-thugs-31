@@ -51,11 +51,11 @@ function CropForm() {
         <main className="flex-1 mx-32 md:p-0 lg:pt-8 lg:px-8 md:mx-36 flex flex-col">
           <section className="bg-cream-lighter p-4 shadow-lg">
             <div className="md:flex">
-              <h2 className="md:w-1/3 uppercase tracking-wide text-lg text-sm sm:text-lg mb-6">
+              <h2 className="md:w-1/3 uppercase tracking-wide text-lg  sm:text-lg mb-6">
                 Search your Traders AiFarmming Portal
               </h2>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="w-full">
               <div className="md:flex mb-8">
                 <div className="md:w-1/3">
                   <legend className="uppercase tracking-wide text-xl">
@@ -105,7 +105,7 @@ function CropForm() {
                         placeholder="#3"
                       />
                       <span className="text-xs mb-4 font-thin">
-                        We lied, this isn't required.
+                        We lied, this isnt required.
                       </span>
                     </div>
                   </div>
@@ -222,7 +222,7 @@ function CropForm() {
       <div className="info text-2xl text-center pt-5">
         Total Traders available {available.length} Drivers
       </div>
-      <div classNameName="traders grid grid-cols-4 mx-8">
+      <div className="traders grid grid-cols-4 mx-8">
         {available.map((it, ind) => (
           <Card data={it} key={ind} />
         ))}

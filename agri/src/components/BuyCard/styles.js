@@ -29,9 +29,11 @@ export default makeStyles({
   },
   overlay2: {
     position: "absolute",
-    top: "20px",
+    top: "3px",
     right: "20px",
     color: "white",
+    display: "flex",
+    alignItems: "center",
   },
   grid: {
     display: "flex",
